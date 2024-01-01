@@ -8,3 +8,4 @@ Sample UI:
 ![Create Task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174252.png)
 ![Check off task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174642.png)
 
+inspired by devstackr.
