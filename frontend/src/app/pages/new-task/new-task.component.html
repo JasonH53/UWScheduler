@@ -1,0 +1,20 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Create a new Task
+        </h1>
+        <div class="field">
+            <div class="control">
+              <input #taskTitleInput class="input has-background-light is-medium" type="text" placeholder="Enter Task Name">
+            </div>
+          </div>
+        <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link has-background-black" (click) = 'createTask(taskTitleInput.value)'>Create</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light" (click) = 'navigateReturn()'>Cancel</button>
+            </div>
+          </div>
+    </div>
+</div>

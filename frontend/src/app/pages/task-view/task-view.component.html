@@ -1,0 +1,34 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="sidebar has-background-white">
+            <h1 class="title">
+                Lists
+            </h1>
+            <div class="list-menu">
+                <a class="list-menu-item" *ngFor = "let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="is-active">
+                    <p>
+                        {{list.title}}
+                    </p>
+                </a>
+            </div>
+            <button class="button has-background-light" (click) = 'navigateNewList()'>
+                + New List
+            </button>
+        </div>
+
+        <div class="task-list-container has-background-light">
+            <h1 class="title">
+                Tasks
+            </h1>
+            <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed }">
+                <p>
+                    {{task.title}}
+                </p>
+            </div>
+
+            <button class="circle-add-button button" routerLink='./new-task'>
+                <img src="../../../assets/plus-icon.svg">
+            </button>
+        </div>
+    </div>
+</div>
