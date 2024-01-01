@@ -5,8 +5,6 @@ The program is a web app that allows students to plan out their assignments for 
 # Screenshots
 Sample UI:
 ![Sample UI](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174155.png)
-Create Tasks (+):
 ![Create Task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174252.png)
-Check off completed tasks:
 ![Check off task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174642.png)
 
