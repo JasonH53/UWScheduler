@@ -1,6 +1,6 @@
 # UWaterloo Assignment Planner
 
-The program allows students to plan out their assignments of different subjects ahead of time and check off completed tasks. It is built with MongoDB, AngularJS, ExpressJS, and NodeJS. It is still very much a work in progress.
+The is a web app that allows students to plan out their assignments for different subjects ahead of time and check off completed tasks. It is built with MongoDB, AngularJS, ExpressJS, and NodeJS. It is still very much a work in progress.
 
 # Screenshots
 Sample UI:
