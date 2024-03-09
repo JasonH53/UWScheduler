@@ -5,7 +5,6 @@ A modern and minimalistic web app that allows students to plan out their assignm
 # Screenshots
 Sample UI:
 ![Sample UI](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174155.png)
-![Create Task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174252.png)
 ![Check off task](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174642.png)
 
 inspired by devstackr.
