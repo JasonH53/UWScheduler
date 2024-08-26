@@ -6,9 +6,16 @@ const ListSchema = new mongoose.Schema({
         required: true,
         minlength: 1,
         trim: true
+    },
+    owner: {
+        type: mongoose.Types.ObjectId,
+        required: true,
+        ref: 'User'
     }
-})
+}, {
+    timestamps: true
+});
 
 const List = mongoose.model('List', ListSchema);
 
-module.exports = { List }
+module.exports = { List };

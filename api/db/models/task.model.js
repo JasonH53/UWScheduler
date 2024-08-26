@@ -7,18 +7,24 @@ const TaskSchema = new mongoose.Schema({
         minlength: 1,
         trim: true
     },
-
     _listId: {
         type: mongoose.Types.ObjectId,
-        required: true
+        required: true,
+        ref: 'List'
     },
-
+    owner: {
+        type: mongoose.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     completed: {
         type: Boolean,
         default: false
     }
-})
+}, {
+    timestamps: true
+});
 
 const Task = mongoose.model('Task', TaskSchema);
 
-module.exports = { Task }
+module.exports = { Task };

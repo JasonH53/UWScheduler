@@ -1,12 +1,21 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager').then(() => {
-    console.log("connected to mongodb");
-}).catch((e) => {
-    console.log("Error: " + e);
-});
 
-module.exports = {
-    mongoose
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to MongoDB Atlas");
+  } catch (error) {
+    console.error("Error connecting to MongoDB Atlas:", error);
+    process.exit(1);
+  }
 };
+
+connectToDatabase();
+
+module.exports = { mongoose };
