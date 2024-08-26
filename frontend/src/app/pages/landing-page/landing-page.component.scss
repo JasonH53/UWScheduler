@@ -4,7 +4,6 @@
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   line-height: 1.6;
-  background-color: #1a1a1a;
 }
 
 .landing-page {
@@ -45,22 +44,21 @@ header {
 
 .login {
   background-color: transparent;
-  color: #0098ff;
-  border: 2px solid #0098ff;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .login:hover {
-  background-color: #0098ff;
-  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .register {
-  background-color: #0098ff;
-  color: #1a1a1a;
+  background-color: $primary;
+  color: #000000;
 }
 
 .register:hover {
-  background-color: #007acc;
+  background-color: darken($primary, 10%);
 }
 
 main {
@@ -78,7 +76,7 @@ main {
 h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #0098ff;
+  color: $primary;
 }
 
 .hero p {
@@ -89,8 +87,8 @@ h1 {
 
 .cta-button {
   display: inline-block;
-  background-color: #0098ff;
-  color: #1a1a1a;
+  background-color: $primary;
+  color: #000000;
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
@@ -99,7 +97,7 @@ h1 {
 }
 
 .cta-button:hover {
-  background-color: #007acc;
+  background-color: darken($primary, 10%);
 }
 
 .content {
@@ -113,7 +111,7 @@ h2 {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
-  color: #0098ff;
+  color: $primary;
 }
 
 .features, .screenshots {
@@ -136,7 +134,7 @@ h2 {
 
 .feature-item i {
   font-size: 24px;
-  color: #0098ff;
+  color: $primary;
   margin-bottom: 10px;
 }
 
@@ -154,7 +152,7 @@ h2 {
 .screenshot-item img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 footer {
