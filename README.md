@@ -1,4 +1,5 @@
 UWScheduler
+===========
 
 A modern and minimalistic web app that allows students to plan out their assignments for different subjects ahead of time and check off completed tasks.
 
