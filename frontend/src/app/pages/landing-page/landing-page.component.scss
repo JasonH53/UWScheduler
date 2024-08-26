@@ -1,0 +1,183 @@
+@import '../../../main-styles.scss';
+
+:host {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  background-color: #1a1a1a;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: $primary;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login {
+  background-color: transparent;
+  color: #0098ff;
+  border: 2px solid #0098ff;
+}
+
+.login:hover {
+  background-color: #0098ff;
+  color: #1a1a1a;
+}
+
+.register {
+  background-color: #0098ff;
+  color: #1a1a1a;
+}
+
+.register:hover {
+  background-color: #007acc;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #0098ff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0098ff;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #007acc;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0098ff;
+}
+
+.features, .screenshots {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.feature-item i {
+  font-size: 24px;
+  color: #0098ff;
+  margin-bottom: 10px;
+}
+
+.feature-item h3 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+.screenshot-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}

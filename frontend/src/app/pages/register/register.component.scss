@@ -64,11 +64,6 @@
         }
     }
 
-    .error-message {
-        color: red;
-        margin-top: 10px;
-    }
-
     p {
         margin-top: 20px;
         text-align: center;
@@ -83,4 +78,9 @@
             }
         }
     }
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
 }

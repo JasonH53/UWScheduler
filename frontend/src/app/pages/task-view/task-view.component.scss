@@ -50,7 +50,7 @@
     flex-direction: column;
     margin-top: 15px;
     flex-grow: 1;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', Arial, sans-serif;
     overflow-y: auto;
     max-height: calc(100% - 120px);
 
@@ -74,14 +74,14 @@
 }
 
 .button {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 .task {
     background: white;
     padding: 15px 20px;
     border-radius: 5px;
     margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', Arial, sans-serif;
 
     &:not(.complete) {
         transition: box-shadow 0.2s ease, transform 0.2s ease;
