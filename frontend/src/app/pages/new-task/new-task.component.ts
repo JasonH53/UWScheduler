@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../task.service';
-import { subscriptionLogsToBeFn } from 'rxjs/internal/testing/TestScheduler';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AuthService } from '../../auth.service'; // Add this import
 
 @Component({
   selector: 'app-new-task',
@@ -14,11 +13,22 @@ import { Router } from '@angular/router';
 })
 export class NewTaskComponent implements OnInit {
 
-  constructor(private taskService: TaskService, private router : Router, private route : ActivatedRoute) {}
+  constructor(
+    private taskService: TaskService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private authService: AuthService // Add this
+  ) {}
 
   listId!: string;
 
   ngOnInit() {
+    // Check if user is authenticated
+    if (!this.authService.isLoggedIn()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
     this.route.params.subscribe(
       (params: Params) => {
         if (params['listId']) {
@@ -26,7 +36,7 @@ export class NewTaskComponent implements OnInit {
           console.log(this.listId);
         }
       }
-    )    
+    );    
   }
 
   navigateReturn() {
@@ -34,10 +44,17 @@ export class NewTaskComponent implements OnInit {
   }
 
   createTask(title: string) {
-    this.taskService.createTasks(title, this.listId).subscribe((newTask : any) => {
-      console.log(title);
-      this.navigateReturn();
-    })
+    this.taskService.createTasks(title, this.listId).subscribe(
+      (newTask: any) => {
+        console.log(title);
+        this.navigateReturn();
+      },
+      (error) => {
+        console.error('Error creating task:', error);
+        if (error.status === 401) {
+          this.router.navigate(['/login']);
+        }
+      }
+    );
   }
 }
-
