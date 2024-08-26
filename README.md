@@ -17,5 +17,3 @@ npm start
 
 Sample UI:
 ![Sample UI](https://github.com/JasonH53/UWAssignmentPlanner/blob/main/images/Screenshot%202024-01-01%20174155.png)
-
-inspired by devstackr.
