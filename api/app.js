@@ -13,7 +13,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://jasonh53.github.io/UWScheduler',
+    origin: 'https://jasonh53.github.io',
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
