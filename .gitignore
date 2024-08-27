@@ -2,6 +2,7 @@
 ./api/node_modules
 ./frontend/node_modules
 .env
+environment.ts
 
 # Compiled output
 /dist
