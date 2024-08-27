@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/",
-    "/lists",
-    "/login",
-    "/new-list",
-    "/register"
-  ]
-}
