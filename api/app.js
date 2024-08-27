@@ -13,7 +13,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://uw-scheduler.vercel.app',
+    origin: 'https://jasonh53.github.io/UWScheduler',
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
