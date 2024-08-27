@@ -13,7 +13,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:4200',
+    origin: 'https://uw-scheduler.vercel.app',
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -224,6 +224,10 @@ app.get('/lists/:listId/tasks/:taskId', (req,res) => {
     }).catch((e) => {
         res.status(500).send(e);
     });
+});
+
+app.listen(3000, () => {
+    console.log('server is listening on port 3000');
 });
 
 module.exports = app;
