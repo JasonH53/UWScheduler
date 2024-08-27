@@ -3,15 +3,15 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
-async function connect() {
+const connectToDatabase = async () => {
   try {
-      await client.connect();
-      console.log('Connected to MongoDB');
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("Connected to MongoDB Atlas");
   } catch (error) {
-      console.error('Error connecting to MongoDB:', error);
+    console.error("Error connecting to MongoDB Atlas:", error);
+    process.exit(1);
   }
-}
-
+};
 
 connectToDatabase();
 
