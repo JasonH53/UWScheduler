@@ -9,11 +9,39 @@ A modern and minimalistic web app that allows students to plan out their assignm
 
 - Install [Node.js](https://nodejs.org/en)
 - Clone the repository 
-- Run the following commands:
+- To run this locally:
 
+Backend:
 ```
-npm run install
-npm start
+cd api
+npm install
+touch .env
+```
+Create the .env file with the following format:
+```
+MONGODB_URI=XXX
+JWT_SECRET=XXX
+```
+
+Return to home directory
+```
+cd ..
+```
+
+Frontend:
+```
+cd frontend
+npm install
+cd src
+touch environment.ts
+```
+
+Create an environment.ts file:
+```
+export const environment = {
+    production: true,
+    apiUri: 'API_URL',
+};
 ```
 
 Demo:
