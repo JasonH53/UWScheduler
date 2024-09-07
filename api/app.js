@@ -13,10 +13,10 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://jasonh53.github.io',
+    origin: 'http://localhost:4200',
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
-}));
+}));;
 
 // Public Routes:
 

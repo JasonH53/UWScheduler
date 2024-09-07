@@ -1,0 +1,12 @@
+services:
+  api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./api/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "4200:4200"
